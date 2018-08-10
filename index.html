@@ -14,6 +14,9 @@
             var s = "";
             let d = "";
             let text;
+            let month = new Date().getMonth();
+            let m;
+            m = (month + 1);
             let currentDay = new Date().getDay();
             let days = [
                 "Pazar",
@@ -32,8 +35,8 @@
             s += (10 > dt.getMinutes() ? "0" : "") + dt.getMinutes() + ":";
             s += (10 > dt.getSeconds() ? "0" : "") + dt.getSeconds();
 
-            d += (10 > dt.getDay() ? "0" : "") + dt.getDay() + "/";
-            d += (10 > dt.getMonth() ? "0" : "") + dt.getMonth() + "/";
+            d += (10 > dt.getDate() ? "0" : "") + dt.getDate() + "/";
+            d += (10 > m ? "0" : "") + m + "/";
             d += (10 > dt.getFullYear() ? "0" : "") + dt.getFullYear();
             setTimeout(updateClock, 1000);
 
@@ -50,7 +53,7 @@
     background-size: cover;">
     <div id="clocktext" style="font-size: 8vw; color:white; text-shadow: 1px 2px 3px black; margin: 10% 0 0 3%;"></div>
     <div id="date" style="font-size: 3vw; color:white; text-shadow: 1px 2px 3px black; margin: 1% 0 0 6%; float: left;"></div>
-    <div id="day" style="font-size: 3vw; color:white; text-shadow: 1px 2px 3px black; margin: 1% 0 0 0; padding: 0 0 0 1%; float: left;" ></div>
+    <div id="day" style="font-size: 3vw; color:white; text-shadow: 1px 2px 3px black; margin: 1% 0 0 0; padding: 0 0 0 1%; float: left;"></div>
 
 </body>
 
